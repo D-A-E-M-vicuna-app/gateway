@@ -17,7 +17,11 @@ import * as cors from 'cors';
             {
               name: 'users',
               url: 'http://localhost:3000/graphql',
-            }
+            },
+            {
+              name: 'tickets',
+              url: 'http://localhost:3003/graphql',
+            },
           ],
         }),
       },
@@ -28,6 +32,8 @@ import * as cors from 'cors';
   controllers: [AppController],
   providers: [AppService],
 })
+//export class AppModule { }
+
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(cors()).forRoutes('*');
