@@ -22,6 +22,10 @@ import * as cors from 'cors';
               name: 'tickets',
               url: 'http://localhost:3003/graphql',
             },
+            {
+              name: 'institutions',
+              url: 'http://localhost:3004/graphql',
+            }
           ],
         }),
       },
